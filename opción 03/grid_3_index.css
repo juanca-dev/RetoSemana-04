@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,  body{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor{
+    min-width: 700px;
+    min-width: 1000px;
+    min-height: 900px;
+    margin: 0 auto;
+    /* grid */
+    display: grid;
+
+    grid-template-columns: repeat(4,minmax(150px,1fr));
+
+    font-family: sans-serif;
+}
+
+.caja{
+
+    /* border: 2px solid skyblue; */
+    background: #eee;
+    font-size: 24px;
+    color: #9C2C15;
+    padding: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+
+
+.caja:nth-of-type(1){
+    background-image: url("./img/uno.png");
+    grid-row: span 1;
+    border-radius: 10px;
+    grid-column: span 2;
+    grid-column-gap: 10px;
+}
+
+.caja:nth-of-type(2){
+    background-image: url("./img/dos.png");
+    border-radius: 10px;
+    grid-column-gap: 10px;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.caja:nth-of-type(3){
+    background-image: url("./img/tres.png");
+    grid-column: span 1;
+    grid-row: span 1;
+    border-radius: 10px;
+    grid-column-gap: 10px;
+}
+.caja:nth-of-type(4){
+    background-image: url("./img/cuatro.png");
+    grid-column: span 2;
+    grid-row: span 1;
+    border-radius: 10px;
+    grid-column-gap: 10px;
+}
+.caja:nth-of-type(5){
+    background-image: url("./img/cinco.png");
+    grid-column: span 1;
+    grid-row: span 2;
+    border-radius: 10px;
+    grid-column-gap: 10px;
+}
+.caja:nth-of-type(6){
+    background-image: url("./img/seis.png");
+    grid-column: span 1;
+    grid-row: span 1;
+    border-radius: 10px;
+    grid-column-gap: 10px;
+}
+.caja:nth-of-type(7){
+    background-image: url("./img/siete.png");
+    grid-column: span 2;
+    grid-row: span 1;
+    border-radius: 10px;
+    grid-column-gap: 10px;
+}
+
+@media screen and (max-width:320px){
+
+    .contenedor{
+        grid-template-columns: repeat(1,minmax(50px,1fr));
+    }
+    
+}
+@media screen and (max-width:768px){
+    .contenedor{
+        grid-template-columns: repeat(2,minmax(100px,1fr));
+    }    
+}
